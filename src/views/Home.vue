@@ -21,7 +21,7 @@
         class="btn btn-primary mx-2"
       >Post A Job</button>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 d-flex justify-content-center">
       <create-car v-if="carForm" />
       <create-house v-else-if="houseForm" />
       <create-job v-else-if="jobForm" />
