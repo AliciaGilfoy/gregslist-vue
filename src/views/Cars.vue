@@ -1,6 +1,6 @@
 <template>
-  <div class="car row">
-    <car v-for="(carObj) in Cars" :key="carObj._id" :carData="carObj" />
+  <div class="car row d-flex justify-content-center">
+    <car v-for="(carObj) in cars" :key="carObj._id" :carData="carObj" />
   </div>
 </template>
 

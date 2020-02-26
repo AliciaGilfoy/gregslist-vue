@@ -1,6 +1,6 @@
 <template>
-  <div class="job row">
-    <job v-for="(jobObj) in Jobs" :key="jobObj._id" :jobData="jobObj" />
+  <div class="job row d-flex justify-content-center">
+    <job v-for="(jobObj) in jobs" :key="jobObj._id" :jobData="jobObj" />
   </div>
 </template>
 

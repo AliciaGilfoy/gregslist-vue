@@ -1,6 +1,6 @@
 <template>
-  <div class="house row">
-    <house v-for="(houseObj) in Houses" :key="houseObj._id" :houseData="houseObj" />
+  <div class="house row d-flex justify-content-center">
+    <house v-for="(houseObj) in houses" :key="houseObj._id" :houseData="houseObj" />
   </div>
 </template>
 

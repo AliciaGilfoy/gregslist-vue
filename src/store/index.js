@@ -90,9 +90,12 @@ export default new Vuex.Store({
     },
     async deleteCar({ commit, dispatch }, carId) {
       try {
-        let res = await _api.delete("cars", carId);
+        let res = await _api.delete("cars/" + carId);
         commit("removeCar", carId)
         commit("setActiveCar", {})
+        router.push({
+          name: "Cars",
+        });
       } catch (error) {
         console.error(error)
       }
@@ -131,9 +134,12 @@ export default new Vuex.Store({
     },
     async deleteJob({ commit, dispatch }, jobId) {
       try {
-        let res = await _api.delete("jobs", jobId);
+        let res = await _api.delete("jobs/" + jobId);
         commit("removeJob", jobId)
         commit("setActiveJob", {})
+        router.push({
+          name: "Jobs",
+        });
       } catch (error) {
         console.error(error)
       }
@@ -172,9 +178,12 @@ export default new Vuex.Store({
     },
     async deleteHouse({ commit, dispatch }, houseId) {
       try {
-        let res = await _api.delete("houses", houseId);
+        let res = await _api.delete("houses/" + houseId);
         commit("removeHouse", houseId)
         commit("setActiveHouse", {})
+        router.push({
+          name: "Houses",
+        });
       } catch (error) {
         console.error(error)
       }

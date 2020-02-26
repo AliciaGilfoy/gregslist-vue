@@ -6,7 +6,9 @@
       <li class="list-group-item">Year: {{houseData.year}}</li>
     </ul>
     <div class="card-body">
-      <button class="btn btn-info">More Info</button>
+      <router-link :to="{ name: 'HouseDetails', params: {houseId: this.houseData._id}}">
+        <button class="btn btn-info">More Info</button>
+      </router-link>
     </div>
   </div>
 </template>
